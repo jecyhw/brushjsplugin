@@ -1,0 +1,9 @@
+div#brush {
+	position: fixed;
+	top:60px;
+	right:10px;
+	padding: 20px;
+	font-size: 24px;
+	z-index: 1000; 
+	background-color: red;
+}
