@@ -1,22 +1,22 @@
-{ 
-"manifest_version": 2, 
-"name": "ucas-brush-course-test", 
-"version": "1.0", 
-"description": "ucas brush course test. --by jecyhw", 
-"browser_action": { 
-"default_icon": "icon.png" 
-}, 
-"permissions": [ 
-"http://*/", 
-"bookmarks", 
-"tabs", 
-"history" 
-] , 
-"content_scripts": [ 
-{ 
-"matches": ["http://jwxk.ucas.ac.cn/courseManage/*"], 
-"css": ["brush.css"], 
-"js": ["jquery.js","brush.js"] 
-} 
-] 
+{
+  "manifest_version": 2,
+  "name": "ucas-brush-course-test",
+  "version": "1.0",
+  "description": "ucas brush course test. --by jecyhw",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "http://*/",
+    "bookmarks",
+    "tabs",
+    "history"
+  ] ,
+  "content_scripts": [
+    {
+      "matches": ["http://jwxk.ucas.ac.cn/courseManage/*"],
+      "css": [],
+      "js": ["jquery.js", "bootstrap.js","brush.js"]
+    }
+  ]
 }
