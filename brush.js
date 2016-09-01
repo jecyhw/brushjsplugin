@@ -14,9 +14,14 @@ function init() {
 		}
 	} else {
         if (courseNumber) {
-            notice('课程:' + courseNumber + '已选上,是否为学位课:' + localStorage[courseNumber]);
-            localStorage.removeItem('courseNumber');
-            localStorage.removeItem(courseNumber);
+			$("tr > td > a").each(function() {
+				if ($(this).text().trim() == courseNumber) {
+					notice('课程:' + courseNumber + '已选上,是否为学位课:' + localStorage[courseNumber]);
+            		localStorage.removeItem('courseNumber');
+            		localStorage.removeItem(courseNumber);
+				}
+			});
+            
         }
 	}
 }
@@ -76,7 +81,7 @@ function brush(courseNumber, degree) {
 		notice('正在刷的课程号:' + courseNumber, 'info');
 		var courseNumberInput = null, degreeInput = null;
 		$('a span').each(function () {
-			if ($(this).text() == courseNumber) {
+			if ($(this).text().trim() == courseNumber) {
 				console.log("找到课程");
 				var tr = $(this).parents('tr').find('input');
 				courseNumberInput = tr.eq(0);
