@@ -56,7 +56,7 @@ function loadModal() {
 	$('#ok').click(function () {
 		var courseNumber = $('#courseNumber').val();
 		var degree = $('#degree').prop('checked');
-		modal.modal('hide');
+		modal.remove();
 		brush(courseNumber, degree);
 	});
 }
