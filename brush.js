@@ -93,7 +93,7 @@ function brush(courseNumber, degree) {
 			if (!courseNumberInput.prop('disabled')) {
 				console.log("勾选课程");
 				courseNumberInput.prop('checked', true);
-				if (degree && !degreeInput.prop("disabled")) {
+				if ((degree == true || degree == 'true') && !degreeInput.prop("disabled")) {
 					console.log("勾选学位课");
 					degreeInput.prop("checked", true);
 				}
